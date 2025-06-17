@@ -1,8 +1,7 @@
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const container = document.getElementById("letters");
-
-for (let i = 0; i < 30; i++) {
+for (let i = 0; i < 25; i++) {
   const span = document.createElement("span");
   span.className = "letter";
   span.textContent = letters[Math.floor(Math.random() * letters.length)];

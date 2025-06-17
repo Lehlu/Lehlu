@@ -1,8 +1,6 @@
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; padding: 0; box-sizing: border-box;
 }
 
 body, html {
@@ -31,12 +29,11 @@ body, html {
   height: 100%;
   z-index: -2;
   pointer-events: none;
-  overflow: hidden;
 }
 
 .letter {
   position: absolute;
-  color: rgba(255,255,255,0.05);
+  color: rgba(255,255,255,0.04);
   font-size: 4rem;
   animation: float 10s infinite ease-in-out;
 }
