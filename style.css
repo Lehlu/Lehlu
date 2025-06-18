@@ -8,35 +8,24 @@
 html, body {
   height: 100%;
   font-family: 'Helvetica Neue', sans-serif;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  background-color: #000;
+  background: #000;
 }
 
-.background {
-  position: fixed;
+.bg-wrapper {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.safe-bg {
+  width: 100%;
   height: 100vh;
   object-fit: cover;
-  z-index: -3;
-}
-
-#fog {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 120%;
-  height: 100%;
-  background: radial-gradient(circle at 50% 60%, rgba(255, 136, 0, 0.12), transparent 60%);
-  animation: pulse 6s ease-in-out infinite alternate;
-  z-index: -2;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1) translateX(0); opacity: 0.1; }
-  100% { transform: scale(1.05) translateX(-2%); opacity: 0.2; }
+  display: block;
 }
 
 .section {
@@ -49,5 +38,12 @@ html, body {
   font-size: 2.3rem;
   text-align: center;
   padding: 2rem;
+  position: relative;
+  z-index: 1;
   text-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
