@@ -1,1 +1,1 @@
-console.log('Lehlu site loaded');
+console.log('Lehlu site with inline background loaded');
